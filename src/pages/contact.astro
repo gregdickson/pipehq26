@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Contact Us | PipeHQ"
+  description="Get in touch with the PipeHQ team. We're based in New Zealand and ready to help your trade business grow."
+  canonicalUrl="/contact"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Get in Touch</h1>
+        <p class="mt-4 text-lg text-neutral-600">Have a question? Want to learn more? We'd love to hear from you.</p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-lg font-bold text-neutral-900 mb-4">Contact Details</h2>
+            <!-- TODO: Replace with real contact details -->
+            <div class="space-y-4 text-neutral-600">
+              <p><strong>Phone:</strong> <a href="tel:+6400000000" class="text-primary hover:underline">+64 (0) 000 0000</a></p>
+              <p><strong>Email:</strong> <a href="mailto:hello@pipehq.co.nz" class="text-primary hover:underline">hello@pipehq.co.nz</a></p>
+              <p><strong>Location:</strong> New Zealand</p>
+            </div>
+          </div>
+          <div>
+            <!-- TODO: Contact form or embed Calendly -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FAQ from '../../components/sections/FAQ.astro';
+---
+
+<BaseLayout
+  title="AI Automation for Plumbers | PipeHQ"
+  description="PipeHQ helps plumbing businesses automate quoting, scheduling, invoicing, and follow-ups. Win more plumbing jobs and get paid faster."
+  canonicalUrl="/industries/plumbers"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">For Plumbers</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">The AI Operating System Built for Plumbing Businesses</h1>
+        <p class="mt-4 text-lg text-neutral-600">Stop losing emergency calls to voicemail. Stop spending your evenings writing quotes. PipeHQ automates the admin so you can focus on the pipes.</p>
+        <div class="mt-8">
+          <a href="/demo" class="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition-colors">
+            Book a Free Demo
+          </a>
+        </div>
+      </div>
+      <!-- TODO: Plumber-specific pain points -->
+      <!-- TODO: Feature highlights relevant to plumbing -->
+      <!-- TODO: Plumber case study / testimonial -->
+      <!-- TODO: Cross-link to feature pages (AI Voice Quoting, AI Receptionist, etc.) -->
+    </div>
+  </section>
+
+  <FAQ />
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="AI Voice Quoting for Trade Businesses | PipeHQ"
+  description="Let customers describe the job by voice. PipeHQ's AI generates an accurate quote in seconds — no more hours spent writing quotes at night."
+  canonicalUrl="/platform/ai-voice-quoting"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Platform Feature</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">AI Voice Quoting</h1>
+        <p class="mt-4 text-lg text-neutral-600">Customers describe the job in their own words. PipeHQ's AI listens, understands, and generates an accurate, professional quote — in seconds, not hours.</p>
+      </div>
+      <!-- TODO: Feature demo visual / screenshot -->
+      <!-- TODO: Benefits list -->
+      <!-- TODO: Real-world example micro-story (E-E-A-T) -->
+      <!-- TODO: CTA to book demo -->
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const industries = [
+  { name: 'Plumbers', slug: 'plumbers', description: 'Automate quoting, scheduling, and invoicing for your plumbing business.' },
+  { name: 'Electricians', slug: 'electricians', description: 'Win more electrical jobs with AI-powered lead capture and follow-up.' },
+  { name: 'HVAC', slug: 'hvac', description: 'Streamline your HVAC operations from first call to final payment.' },
+  { name: 'Builders', slug: 'builders', description: 'Manage complex building projects with intelligent scheduling and documentation.' },
+  { name: 'Landscapers', slug: 'landscapers', description: 'Grow your landscaping business with automated quoting and review requests.' },
+  { name: 'Roofers', slug: 'roofers', description: 'Never miss a roofing lead again with 24/7 AI call answering.' },
+  { name: 'Painters', slug: 'painters', description: 'Send professional painting quotes in minutes, not hours.' },
+  { name: 'Cleaning Services', slug: 'cleaning', description: 'Scale your cleaning business with automated scheduling and payments.' },
+  { name: 'Mechanics', slug: 'mechanics', description: 'Streamline your workshop with digital job cards and automated invoicing.' },
+  { name: 'Property Management', slug: 'property-management', description: 'Manage maintenance requests and contractor coordination effortlessly.' },
+];
+---
+
+<BaseLayout
+  title="Industries — AI Automation for Every Trade | PipeHQ"
+  description="PipeHQ serves plumbers, electricians, builders, HVAC, landscapers, roofers, painters, cleaners, mechanics, and property managers across New Zealand."
+  canonicalUrl="/industries"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Built for Every Trade</h1>
+        <p class="mt-4 text-lg text-neutral-600">PipeHQ adapts to the way your specific trade works. Choose your industry to see how.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {industries.map((ind) => (
+          <a href={`/industries/${ind.slug}`} class="group block p-6 bg-white rounded-xl border border-neutral-200 hover:border-primary hover:shadow-lg transition-all">
+            <h2 class="text-lg font-bold text-neutral-900 group-hover:text-primary transition-colors">{ind.name}</h2>
+            <p class="mt-2 text-sm text-neutral-600">{ind.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

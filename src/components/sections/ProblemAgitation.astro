@@ -1,0 +1,37 @@
+---
+// Problem & Agitation Section
+// Reference: page_anatomy.md Section 4
+// Goal: Make the visitor feel understood by articulating their pain points
+
+interface Props {
+  headline?: string;
+}
+
+const { headline = 'Sound Familiar?' } = Astro.props;
+
+const painPoints = [
+  { icon: '📞', text: 'Losing leads to voicemail because you\'re on a job' },
+  { icon: '📋', text: 'Spending evenings writing quotes instead of being with family' },
+  { icon: '💸', text: 'Chasing late payments and wondering where your cash flow went' },
+  { icon: '📅', text: 'Double-booking jobs or forgetting follow-ups' },
+  { icon: '⭐', text: 'Happy customers who never leave you a review' },
+  { icon: '🗂️', text: 'Drowning in paperwork, photos, and scattered notes' },
+];
+---
+
+<section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-900">{headline}</h2>
+      <p class="mt-4 text-lg text-neutral-600">Running a trade business is hard enough without fighting your own systems.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {painPoints.map((point) => (
+        <div class="flex items-start gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+          <span class="text-2xl" aria-hidden="true">{point.icon}</span>
+          <p class="text-base text-neutral-700 font-medium">{point.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

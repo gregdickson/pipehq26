@@ -1,0 +1,41 @@
+---
+// Solution & How It Works Section
+// Reference: page_anatomy.md Section 5
+// Goal: Introduce the product as the clear solution with a simple 3-step process
+
+const steps = [
+  {
+    number: '01',
+    title: 'Connect Your Business',
+    description: 'Sign up and connect your phone number. PipeHQ starts answering calls, capturing leads, and sending quotes in minutes.',
+  },
+  {
+    number: '02',
+    title: 'Automate the Admin',
+    description: 'AI handles your quoting, follow-ups, scheduling, invoicing, and review requests — automatically, 24/7.',
+  },
+  {
+    number: '03',
+    title: 'Grow Your Revenue',
+    description: 'Win more jobs, get paid faster, and build a 5-star reputation — all while spending less time on admin.',
+  },
+];
+---
+
+<section class="py-(--space-section-y) md:py-(--space-section-y-lg) bg-neutral-950 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold">How PipeHQ Works</h2>
+      <p class="mt-4 text-lg text-neutral-400">Three steps to take back control of your business.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+      {steps.map((step) => (
+        <div class="text-center md:text-left">
+          <span class="inline-block text-4xl font-bold text-primary mb-4">{step.number}</span>
+          <h3 class="text-xl font-bold mb-3">{step.title}</h3>
+          <p class="text-neutral-400 leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

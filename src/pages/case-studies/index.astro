@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Case Studies — Real Results from Real Tradies | PipeHQ"
+  description="See how trade businesses across New Zealand are using PipeHQ to win more jobs, get paid faster, and grow their revenue."
+  canonicalUrl="/case-studies"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Case Studies</h1>
+      <p class="mt-4 text-lg text-neutral-600 max-w-2xl">Real stories from real trade businesses. See the numbers behind the results.</p>
+      <!-- TODO: Case study cards with before/after metrics -->
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

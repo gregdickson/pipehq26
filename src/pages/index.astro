@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import SocialProofBar from '../components/sections/SocialProofBar.astro';
+import ProblemAgitation from '../components/sections/ProblemAgitation.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import FeaturesGrid from '../components/sections/FeaturesGrid.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import FAQ from '../components/sections/FAQ.astro';
+---
+
+<BaseLayout
+  title="PipeHQ — The AI Operating System for Trade Businesses"
+  description="PipeHQ automates quoting, scheduling, invoicing, follow-ups, and more for plumbers, electricians, builders, and trade businesses across New Zealand."
+>
+  <Header slot="header" />
+
+  <Hero
+    headline="Stop Losing Leads. Start Growing Your Trade Business."
+    subheadline="PipeHQ is the AI-powered platform that handles your quoting, scheduling, invoicing, and follow-ups — so you can focus on the work that matters."
+  />
+
+  <SocialProofBar />
+
+  <ProblemAgitation />
+
+  <HowItWorks />
+
+  <FeaturesGrid />
+
+  <Testimonials />
+
+  <FAQ />
+
+  <Footer slot="footer" />
+</BaseLayout>

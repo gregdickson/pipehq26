@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About PipeHQ — Our Story"
+  description="PipeHQ was founded in New Zealand to help trade businesses automate admin and focus on the work that matters. Meet the team behind the platform."
+  canonicalUrl="/about"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">About PipeHQ</h1>
+        <p class="mt-4 text-lg text-neutral-600">We're a New Zealand company on a mission to give trade businesses the same AI-powered tools that big corporations take for granted.</p>
+        <!-- TODO: Company story -->
+        <!-- TODO: Team photos and bios -->
+        <!-- TODO: Values section -->
+        <!-- TODO: Link to /about/our-mission -->
+        <!-- TODO: Link to founder bio page (E-E-A-T) -->
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Blog — Insights for Trade Businesses | PipeHQ"
+  description="Tips, guides, and insights on AI automation, business growth, and efficiency for plumbers, electricians, builders, and trade businesses."
+  canonicalUrl="/blog"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Blog</h1>
+      <p class="mt-4 text-lg text-neutral-600 max-w-2xl">Practical advice on growing your trade business with AI and automation.</p>
+      <!-- TODO: Blog post listing with content collections -->
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

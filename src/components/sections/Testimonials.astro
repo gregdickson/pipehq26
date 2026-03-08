@@ -1,0 +1,49 @@
+---
+// Testimonials Section — Deep Social Proof
+// Reference: page_anatomy.md Section 6
+// Goal: Provide overwhelming proof from real customers
+
+const testimonials = [
+  {
+    quote: 'PipeHQ cut our quoting time from 2 hours to 5 minutes. We\'re winning more jobs and spending less time on admin.',
+    name: 'Customer Name',
+    role: 'Owner, Example Plumbing',
+    image: '/images/testimonials/placeholder.jpg',
+  },
+  {
+    quote: 'The AI receptionist alone has paid for itself ten times over. We haven\'t missed a lead in months.',
+    name: 'Customer Name',
+    role: 'Director, Example Electrical',
+    image: '/images/testimonials/placeholder.jpg',
+  },
+  {
+    quote: 'I used to chase invoices for weeks. Now payments come in the same day. Game changer for cash flow.',
+    name: 'Customer Name',
+    role: 'Owner, Example Building',
+    image: '/images/testimonials/placeholder.jpg',
+  },
+];
+---
+
+<section class="py-(--space-section-y) md:py-(--space-section-y-lg) bg-neutral-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-900">What Tradies Are Saying</h2>
+      <p class="mt-4 text-lg text-neutral-600">Real results from real trade businesses.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map((t) => (
+        <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+          <blockquote class="text-neutral-700 leading-relaxed">"{t.quote}"</blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-neutral-200" aria-label="Customer photo placeholder"></div>
+            <div>
+              <p class="text-sm font-semibold text-neutral-900">{t.name}</p>
+              <p class="text-sm text-neutral-500">{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

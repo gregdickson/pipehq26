@@ -1,0 +1,73 @@
+---
+// Features Grid Section
+// Reference: page_anatomy.md Section 5 (Feature Breakdowns)
+// Goal: Showcase the 9 product pillars in a scannable grid
+
+const features = [
+  {
+    title: 'AI Voice Quoting',
+    description: 'Customers describe the job by voice. AI generates an accurate quote in seconds.',
+    href: '/platform/ai-voice-quoting',
+  },
+  {
+    title: 'Smart Follow-Up',
+    description: 'Automated follow-up sequences that turn quotes into booked jobs.',
+    href: '/platform/smart-follow-up',
+  },
+  {
+    title: 'Visual Pipeline',
+    description: 'See every lead, quote, and job in one drag-and-drop pipeline view.',
+    href: '/platform/pipeline-management',
+  },
+  {
+    title: 'Intelligent Scheduling',
+    description: 'AI-optimised scheduling that reduces drive time and fills your calendar.',
+    href: '/platform/scheduling',
+  },
+  {
+    title: 'Automated Invoicing',
+    description: 'One-tap invoicing from completed jobs. Integrates with Xero and MYOB.',
+    href: '/platform/invoicing',
+  },
+  {
+    title: 'Review Automation',
+    description: 'Automatically request reviews from happy customers at the perfect moment.',
+    href: '/platform/review-automation',
+  },
+  {
+    title: 'AI Receptionist',
+    description: 'Never miss a call again. AI answers, qualifies, and books leads 24/7.',
+    href: '/platform/ai-receptionist',
+  },
+  {
+    title: 'Photo Documentation',
+    description: 'Capture before/after photos tied to every job for records and disputes.',
+    href: '/platform/photo-documentation',
+  },
+  {
+    title: 'Payment Collection',
+    description: 'Get paid on the spot with integrated payment links and reminders.',
+    href: '/platform/payment-collection',
+  },
+];
+---
+
+<section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-900">Everything You Need to Run Your Business</h2>
+      <p class="mt-4 text-lg text-neutral-600">Nine powerful tools, one simple platform.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature) => (
+        <a href={feature.href} class="group block p-6 bg-white rounded-xl border border-neutral-200 hover:border-primary hover:shadow-lg transition-all">
+          <h3 class="text-lg font-bold text-neutral-900 group-hover:text-primary transition-colors">{feature.title}</h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">{feature.description}</p>
+          <span class="mt-4 inline-flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+            Learn more &rarr;
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

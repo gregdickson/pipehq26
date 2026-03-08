@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/sections/FAQ.astro';
+---
+
+<BaseLayout
+  title="Frequently Asked Questions | PipeHQ"
+  description="Got questions about PipeHQ? Find answers about pricing, setup, integrations, and how our AI automation platform works for trade businesses."
+  canonicalUrl="/faq"
+>
+  <Header slot="header" />
+
+  <section class="pt-(--space-section-y) md:pt-(--space-section-y-lg)">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Frequently Asked Questions</h1>
+      <p class="mt-4 text-lg text-neutral-600">Everything you need to know about PipeHQ.</p>
+    </div>
+  </section>
+
+  <FAQ />
+
+  <Footer slot="footer" />
+</BaseLayout>

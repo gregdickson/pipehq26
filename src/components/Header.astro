@@ -1,0 +1,64 @@
+---
+// Header component — Sticky navigation with primary CTA
+// Reference: page_anatomy.md Section 1 (Navigation & Header)
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 font-bold text-xl text-neutral-900">
+        PipeHQ
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/platform" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Platform</a>
+        <a href="/industries" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Industries</a>
+        <a href="/pricing" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Pricing</a>
+        <a href="/about" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">About</a>
+        <a href="/blog" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Blog</a>
+      </nav>
+
+      <!-- CTA + Phone -->
+      <div class="flex items-center gap-4">
+        <a href="tel:+6400000000" class="hidden sm:flex items-center gap-1 text-sm font-medium text-neutral-600 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call Us
+        </a>
+        <a href="/demo" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-primary-dark transition-colors">
+          Book a Demo
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-neutral-600" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 bg-white">
+    <nav class="px-4 py-4 space-y-3">
+      <a href="/platform" class="block text-base font-medium text-neutral-700">Platform</a>
+      <a href="/industries" class="block text-base font-medium text-neutral-700">Industries</a>
+      <a href="/pricing" class="block text-base font-medium text-neutral-700">Pricing</a>
+      <a href="/about" class="block text-base font-medium text-neutral-700">About</a>
+      <a href="/blog" class="block text-base font-medium text-neutral-700">Blog</a>
+      <a href="/demo" class="block w-full text-center px-4 py-3 text-sm font-semibold text-white bg-primary rounded-lg">Book a Demo</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

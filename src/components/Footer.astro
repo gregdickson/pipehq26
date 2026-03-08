@@ -1,0 +1,77 @@
+---
+// Footer component — Company info, links, and trust signals
+// Reference: page_anatomy.md Section 9 (Final CTA & Footer)
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-neutral-900 text-neutral-300">
+  <!-- Final CTA Banner -->
+  <div class="bg-primary">
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-16 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Stop Losing Leads?</h2>
+      <p class="text-blue-100 mb-6 max-w-xl mx-auto">See how PipeHQ can automate your quoting, scheduling, and follow-ups — so you can focus on the work.</p>
+      <a href="/demo" class="inline-flex items-center px-6 py-3 text-base font-semibold text-primary bg-white rounded-lg hover:bg-neutral-100 transition-colors">
+        Book a Free Demo
+      </a>
+      <p class="text-sm text-blue-200 mt-3">No obligation. No credit card required.</p>
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Company -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
+        <ul class="space-y-3">
+          <li><a href="/about" class="text-sm hover:text-white transition-colors">About Us</a></li>
+          <li><a href="/about/our-mission" class="text-sm hover:text-white transition-colors">Our Mission</a></li>
+          <li><a href="/contact" class="text-sm hover:text-white transition-colors">Contact</a></li>
+          <li><a href="/partners" class="text-sm hover:text-white transition-colors">Partners</a></li>
+        </ul>
+      </div>
+
+      <!-- Platform -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Platform</h3>
+        <ul class="space-y-3">
+          <li><a href="/platform" class="text-sm hover:text-white transition-colors">All Features</a></li>
+          <li><a href="/platform/ai-voice-quoting" class="text-sm hover:text-white transition-colors">AI Voice Quoting</a></li>
+          <li><a href="/platform/ai-receptionist" class="text-sm hover:text-white transition-colors">AI Receptionist</a></li>
+          <li><a href="/pricing" class="text-sm hover:text-white transition-colors">Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Industries -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Industries</h3>
+        <ul class="space-y-3">
+          <li><a href="/industries/plumbers" class="text-sm hover:text-white transition-colors">Plumbers</a></li>
+          <li><a href="/industries/electricians" class="text-sm hover:text-white transition-colors">Electricians</a></li>
+          <li><a href="/industries/builders" class="text-sm hover:text-white transition-colors">Builders</a></li>
+          <li><a href="/industries" class="text-sm hover:text-white transition-colors">All Industries</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h3>
+        <ul class="space-y-3">
+          <li><a href="/blog" class="text-sm hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/case-studies" class="text-sm hover:text-white transition-colors">Case Studies</a></li>
+          <li><a href="/how-it-works" class="text-sm hover:text-white transition-colors">How It Works</a></li>
+          <li><a href="/faq" class="text-sm hover:text-white transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-neutral-500">&copy; {currentYear} PipeHQ Ltd. All rights reserved. New Zealand.</p>
+      <div class="flex items-center gap-6">
+        <a href="/privacy" class="text-sm text-neutral-500 hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms" class="text-sm text-neutral-500 hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

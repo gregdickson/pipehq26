@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+---
+
+<BaseLayout
+  title="How It Works | PipeHQ"
+  description="See how PipeHQ works in three simple steps: connect your business, automate the admin, and grow your revenue."
+  canonicalUrl="/how-it-works"
+>
+  <Header slot="header" />
+
+  <section class="py-(--space-section-y) md:py-(--space-section-y-lg)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">How PipeHQ Works</h1>
+        <p class="mt-4 text-lg text-neutral-600">From first call to final payment — here's how PipeHQ automates your entire workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <!-- TODO: Detailed walkthrough of each step -->
+  <!-- TODO: Video demo embed -->
+  <!-- TODO: CTA to book demo -->
+
+  <Footer slot="footer" />
+</BaseLayout>
