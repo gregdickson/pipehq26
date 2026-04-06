@@ -1,0 +1,110 @@
+---
+// Pricing Section — The Offer & Pricing
+// Reference: page_anatomy.md Section 7
+// Reference: design_patterns.md - The No-BS Pricing Table
+// Goal: Clearly present pricing and what's included
+
+interface Props {
+  headline?: string;
+}
+
+const { headline = 'Simple, Transparent Pricing' } = Astro.props;
+
+const plans = [
+  {
+    name: 'Starter',
+    description: 'Perfect for small trade businesses getting started',
+    price: '$49',
+    period: '/month',
+    features: [
+      'AI Receptionist (unlimited calls)',
+      'Smart Quote Builder',
+      '5 Job templates',
+      'Email support',
+    ],
+    cta: 'Start Free Trial',
+    popular: false,
+  },
+  {
+    name: 'Professional',
+    description: 'For growing businesses ready to scale',
+    price: '$99',
+    period: '/month',
+    features: [
+      'Everything in Starter',
+      'Unlimited Job templates',
+      'Automated follow-ups',
+      'Xero & MYOB integration',
+      'Priority support',
+    ],
+    cta: 'Start Free Trial',
+    popular: true,
+  },
+  {
+    name: 'Enterprise',
+    description: 'Full solution for large teams',
+    price: '$199',
+    period: '/month',
+    features: [
+      'Everything in Professional',
+      'Multiple team members',
+      'Advanced analytics',
+      'Custom integrations',
+      'Dedicated account manager',
+    ],
+    cta: 'Contact Sales',
+    popular: false,
+  },
+];
+---
+
+<section class="py-(--space-section-y) md:py-(--space-section-y-lg) bg-neutral-50" id="pricing">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-900">{headline}</h2>
+      <p class="mt-4 text-lg text-neutral-600">No hidden fees. No surprises. Cancel anytime.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {plans.map((plan) => (
+        <div class={`relative bg-white rounded-2xl p-8 ${plan.popular ? 'ring-2 ring-primary shadow-xl' : 'border border-neutral-200 shadow-sm'}`}>
+          {plan.popular && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span class="bg-primary text-white text-sm font-semibold px-4 py-1 rounded-full">Most Popular</span>
+            </div>
+          )}
+
+          <h3 class="text-xl font-bold text-neutral-900">{plan.name}</h3>
+          <p class="mt-2 text-sm text-neutral-600">{plan.description}</p>
+
+          <div class="mt-6 flex items-baseline">
+            <span class="text-4xl font-bold text-neutral-900">{plan.price}</span>
+            <span class="text-neutral-500 ml-1">{plan.period}</span>
+          </div>
+
+          <ul class="mt-8 space-y-4">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-green-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-neutral-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="/demo"
+            class={`mt-8 block w-full py-3 px-6 text-center font-semibold rounded-lg transition-colors ${
+              plan.popular
+                ? 'bg-accent text-white hover:bg-accent-dark'
+                : 'bg-neutral-100 text-neutral-900 hover:bg-neutral-200'
+            }`}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
